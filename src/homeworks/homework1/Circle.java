@@ -13,5 +13,9 @@ public class Circle {
         double perimeter = 2*Math.PI*radius;
 
         System.out.println("Perimeter of flower bed is " + perimeter);
+
+        double area = Math.PI*radius*radius;
+
+        System.out.println("Area of flower bed is " + area);
     }
 }
