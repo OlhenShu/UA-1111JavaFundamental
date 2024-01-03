@@ -1,4 +1,4 @@
-package softserve.javacourse.rachynskyi.homework2.task1;
+package softserve.javacourse.rachynskyi.homework3.task1;
 
 import java.util.Scanner;
 
