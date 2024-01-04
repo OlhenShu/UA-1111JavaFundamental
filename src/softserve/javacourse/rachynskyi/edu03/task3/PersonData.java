@@ -1,4 +1,4 @@
-package softserve.javacourse.rachynskyi.homework3.task3;
+package softserve.javacourse.rachynskyi.edu03.task3;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
