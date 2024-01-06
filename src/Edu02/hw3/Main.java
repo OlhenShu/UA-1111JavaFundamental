@@ -16,6 +16,10 @@ public class Main {
             System.out.println(person);
         }
 
+        //change my first person
+        people[0].changeName("Viktor", "Shelyk");
+        people[0].setBirthYear(1997);
+        System.out.println(people[0]);
     }
 
 
