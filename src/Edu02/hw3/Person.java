@@ -11,10 +11,6 @@ public class Person {
 
     }
 
-    public Person(String firstName,String secondName){
-        this.firstName = firstName;
-        this.secondName = secondName;
-    }
 
     public String getFirstName(){
         return firstName;
@@ -36,6 +32,15 @@ public class Person {
         return birthYear;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", birthYear=" + birthYear +
+                '}';
+    }
+
     public void setBirthYear(int birthYear){
         this.birthYear = birthYear;
     }
@@ -48,22 +53,25 @@ public class Person {
 
     public void input(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first name");
+        System.out.println("Enter first name;");
         this.firstName = sc.nextLine();
-        System.out.println("Enter second name");
+        System.out.println("Enter second name;");
         this.secondName = sc.nextLine();
-        System.out.println("Enter birth year");
+        System.out.println("Enter birth year;");
         this.birthYear = sc.nextInt();
 ;    }
 
     public void output(){
-        System.out.println("First name = "+ firstName + "Second name = " + secondName);
-        System.out.println("Birth day = " + birthYear);
+        System.out.println("First name = "+ firstName+":");
+        System.out.println("Second name = " + secondName +":");
+        System.out.println("Birth day = " + birthYear+":");
         System.out.println("Age = " + getAge());
     }
 
-    public static void main(String[] args) {
 
-
+    public void changeName(String firstName, String secondName){
+        this.firstName = firstName;
+        this.secondName = secondName;
     }
+
 }
