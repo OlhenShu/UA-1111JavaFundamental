@@ -20,7 +20,7 @@ public class ThreeNumbers {
 
     public void getCountOfOddNumbers() {
 
-        int countOfOddNumbers = 0;
+        int countOddNumbers = 0;
 
         System.out.println("Enter first integer number:");
         firstNumber = scanner.nextInt();
@@ -37,11 +37,11 @@ public class ThreeNumbers {
 
         for (int number : numberList) {
             if (isOdd(number)) {
-                countOfOddNumbers++;
+                countOddNumbers++;
             }
         }
 
-        System.out.println(countOfOddNumbers + " odd numbers was entered");
+        System.out.println(countOddNumbers == 1 ? countOddNumbers + " odd number was entered" : countOddNumbers + " odd numbers were entered");
     }
 
     public boolean isOdd(int i) {
