@@ -1,5 +1,7 @@
 package softserve.javacourse.rachynskyi.edu04.homework.task1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class NumberRange {
@@ -11,16 +13,29 @@ public class NumberRange {
     }
 
     public static void checkThatNumberInRange() {
-        System.out.println("Enter number 1:");
-        float number1 = getFloatNumber();
-        System.out.println("Enter number 2:");
-        float number2 = getFloatNumber();
-        System.out.println("Enter number 3:");
-        float number3 = getFloatNumber();
+        List<Float> listOfNumbers = new ArrayList<>();
 
-        System.out.println(number1);
-        System.out.println(number2);
-        System.out.println(number3);
+        System.out.println("Enter number 1:");
+        listOfNumbers.add(getFloatNumber());
+        System.out.println("Enter number 2:");
+        listOfNumbers.add(getFloatNumber());
+        System.out.println("Enter number 3:");
+        listOfNumbers.add(getFloatNumber());
+
+        int i = 0;
+        for (float number : listOfNumbers) {
+            if (number < -5 || number > 5) {
+                i = 1;
+                break;
+            }
+        }
+
+        switch (i) {
+            case 0 -> System.out.println("All numbers belong to range [-5;5]");
+            case 1 -> System.out.println("Not all numbers belong to range [-5;5]");
+            default -> System.out.println("Something happened wrong");
+
+        }
     }
 
     public static float getFloatNumber() {
